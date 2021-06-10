@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import * as studentAPI from '../../utilities/students-api';
 import AuthPage from '../AuthPage/AuthPage';
@@ -14,6 +14,11 @@ import './App.css';
 export default function App() {
 	const [user, setUser] = useState(getUser());
 	const [students, setStudents] = useState([]);
+	const history = useHistory();
+
+useEffect(() => {
+  history.push('/')
+}, [students, history])
 
 	useEffect(() => {
 		async function getStudents(){
@@ -37,10 +42,14 @@ export default function App() {
 					<Switch>
 						<Route path='/students/new'>
 							<AddStudentPage
-							handleAddStudent={handleAddStudent} />
+							handleAddStudent={handleAddStudent} 
+							user={user}
+                			setUser={setUser}/>
 						</Route>
 						<Route path='/'>
 							<StudentsPage
+								user={user}
+                  				setUser={setUser}
 								students={students} 
 							/>
 						</Route>

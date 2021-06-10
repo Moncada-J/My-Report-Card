@@ -5,19 +5,25 @@ const Schema = mongoose.Schema;
 const studentSchema = new Schema(
   {
     studentName: { type: String, required: true },
-    DOB: {
-      type: Date,
+    year: {
+      type: Number,
       default: function () {
-        return new Date().getDate();
+      return new Date().getFullYear();
       },
     },
     teacherName: { type: String, required: true },
+    teacherPrefix: {
+      type: String,
+      required: true,
+      default: "Ms",
+      enum: ["Ms", "Mrs", "Mr", "Mx"],
+    },
     gradeLevel: {
       type: String,
       required: true,
       default: "Kindergarden",
       enum: [
-        "Kindergarden",
+        "Kindergarten",
         "1st Grade",
         "2nd Grade",
         "3rd Grade",
