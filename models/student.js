@@ -8,7 +8,9 @@ const studentSchema = new Schema(
     year: {
       type: Number,
       default: function () {
-      return new Date().getFullYear();
+      return (
+        new Date().getFullYear()
+      );
       },
     },
     teacherName: { type: String, required: true },

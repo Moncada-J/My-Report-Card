@@ -2,20 +2,21 @@ import React from 'react';
 // import * as usersService from '../../utilities/users-service';
 import Student from '../../Components/Student/Student';
 
-function StudentsPage({students}) {
+function StudentsPage({students, handleDeleteStudent}) {
 	const s = students.map(student => 
 		<Student 
 		key={student._id}
-		students={student}
+		student={student}
+		handleDeleteStudent={handleDeleteStudent}
 		/>
 		);
 	return (
-		<>
-			<h1>Student Roster</h1>
-			<div className="studentPage">
-				{s}
-			</div>
-		</>
+	<>
+	<h1>Students in the Classroom</h1>
+		<div>
+			{s}
+      	</div>
+	</>
 	);
 }
 

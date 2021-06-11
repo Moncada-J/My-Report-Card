@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Middleware to verify token and assign user object of payload to req.user
-// Be sure to mount before our routes
+// Be sure to mount before your routes
 app.use(require('./config/checkToken'));
 
 app.use('/api/users', require('./routes/api/users'));
@@ -34,7 +34,8 @@ app.get('/*', function (req, res) {
 });
 
 // Configure to use port 3001 instead of 3000 during development to avoid collision with React's dev server
-const port = process.env.PORT || 3001;
-app.listen(port, function () {
-	console.log(`Express app running on port ${port}`);
+app.set("port", process.env.PORT || 3001);
+
+app.listen(app.get("port"), function () {
+  console.log("Node server is running on port " + app.get("port"));
 });
