@@ -53,12 +53,6 @@ useEffect(() => {
 				<>
 					<NavBar user={user} setUser={setUser} />
 					<Switch>
-						<Route exact path="/students/new">
-							<AddStudentPage
-							handleAddStudent={handleAddStudent} 
-							user={user}
-                			setUser={setUser}/>
-						</Route>
 						<Route exact path="/students">
 							<StudentsPage
 								user={user}
@@ -66,6 +60,12 @@ useEffect(() => {
 								students={students} 
 								handleDeleteStudent={handleDeleteStudent}
 							/>
+						</Route>
+						<Route exact path="/students/new">
+							<AddStudentPage
+							handleAddStudent={handleAddStudent} 
+							user={user}
+                			setUser={setUser}/>
 						</Route>
 						<Route exact path="/students/info">
 							<StudentDetailPage />
