@@ -2,7 +2,7 @@
 
 .navbar {
     /* background-color: blueviolet !important; */
-    background: linear-gradient(90deg, #454645 10%, #283230 80%) !important;
+    background: linear-gradient(90deg, #313535 10%, #2b3936 80%) !important;
     min-height: 110px;
 }
  .navLogo {
@@ -13,11 +13,11 @@
  
 
 .navLink {
-    color: rgb(208, 104, 104);
+    color: #a05148;
 }
 
 .navLink:hover {
-    color: rgb(38, 36, 36);
+    color: rgb(235, 235, 235);
     text-decoration: none;
 }
 
@@ -32,6 +32,4 @@
     border: 0.2vmin solid white;
 }
 
-.dropdown-menu:hover {
-    background-color: red;
-}
+

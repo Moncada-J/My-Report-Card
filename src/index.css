@@ -1,9 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
 
 body {
-  background-color: rgba(212, 213, 208, 0.811) !important;
+  background-color: rgba(240, 242, 234, 0.811) !important;
 }
-
+.banner {
+  width: 100%;
+  border: 0.5vmin rgba(206, 215, 210, 0.747) solid;
+}
 /* :root {
   --white: #FFFFFF;
   --tan-1: #FBF9F6;
