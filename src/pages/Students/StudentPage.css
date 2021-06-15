@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+.student-listItem {
+    font-size: 20px;
+    list-style: none;
+    display: inline-block;
+}
+
+.students-title {
+    font-family: 'Kaushan Script', cursive;
+    color: rgba(162, 76, 76, 0.921);
+    font-size: 11vmin;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-shadow: 1px 1px #eae5e4, 
+                2px 2px #dfdbda, 
+                3px 3px #f2eded;
+}
+
+.students-title:hover {
+    color: #dfdbda;
+     text-shadow: 1px 1px #995A50, 
+                2px 2px rgb(164, 80, 80), 
+                3px 3px rgb(167, 66, 66), 
+                4px 4px rgb(164, 80, 80), 
+                5px 5px rgb(167, 69, 69), 
+                6px 6px rgb(164, 80, 80);
+}

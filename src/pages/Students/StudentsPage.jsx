@@ -1,13 +1,11 @@
 import React from 'react';
-// import Video from './welcomebanner';
-// import * as usersService from '../../utilities/users-service';
-import Student from '../../Components/Student/Student';
 import Banner from './welcome.gif';
-// import Video from '../../Components/BannerVideo/BannerVideo';
+import Chalkboard from '../../Components/Chalkboard/Chalkboard';
+import './StudentPage.css';
 
 function StudentsPage({students, handleDeleteStudent}) {
 	const s = students.map(student => 
-		<Student 
+		<Chalkboard 
 		key={student._id}
 		student={student}
 		handleDeleteStudent={handleDeleteStudent}
@@ -15,12 +13,14 @@ function StudentsPage({students, handleDeleteStudent}) {
 		);
 	return (
 	<>
-	{/* <Video /> */}
-	<img className="banner" src={Banner} alt="banner" />
-	<h1>Students in the Classroom</h1>
-		<div>
-			{s}
-      	</div>
+		<main className="students-page">
+			{/* <Helmet bodyAttributes={{style: 'background-color : #fff'}}/> */}
+			<img className="banner" src={Banner} alt="banner" />
+			<h1 className="students-title">My Classroom</h1>
+			<div className="chalkboard">
+				{s}
+			</div>
+		</main>
 	</>
 	);
 }

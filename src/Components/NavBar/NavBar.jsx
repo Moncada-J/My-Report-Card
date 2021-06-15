@@ -1,5 +1,4 @@
 import React from 'react';
-// import { ReactComponent as Logo } from './logo.svg';
 import logo from './navlogo.png';
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
@@ -12,7 +11,6 @@ import './NavBar.css';
 
 export default function NavBar({ user, setUser }) {
 	function handleLogOut() {
-		// Delegate to the users-service
 		userService.logOut();
 		// Update state will also cause a re-render
 		setUser(null);
@@ -36,7 +34,6 @@ export default function NavBar({ user, setUser }) {
 						<NavDropdown.Divider />
 						<NavDropdown.Item><Link className="navLink dropdownLink" to='' onClick={handleLogOut}>Log Out</Link></NavDropdown.Item>
 					 </NavDropdown>
-					 {/* </Navbar.Brand> */}
 				  </Nav>
   				</Navbar.Collapse>
 			</Navbar>

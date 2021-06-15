@@ -63,6 +63,7 @@ useEffect(() => {
 						</Route>
 						<Route exact path="/students/new">
 							<AddStudentPage
+							style={{backgroundColor: "lightblue"}}
 							handleAddStudent={handleAddStudent} 
 							user={user}
                 			setUser={setUser}/>
